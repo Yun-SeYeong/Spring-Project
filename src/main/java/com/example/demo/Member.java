@@ -2,7 +2,7 @@ package com.example.demo;
 
 
 import lombok.Data;
-import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Repository;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,4 +17,16 @@ public class Member {
     private String id;
     private String password;
     private int inventoryKey;
+
+    @Repository
+    public static class ItemRepository {
+    }
+
+    @Repository
+    public static class InventoryRepository {
+    }
+
+    @Repository
+    public static class InventoryListRepository {
+    }
 }
